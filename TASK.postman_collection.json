@@ -1,0 +1,1075 @@
+{
+	"info": {
+		"_postman_id": "23b065dc-daf9-4739-8721-c5cb30103929",
+		"name": "TASK",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26964603"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "List User",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNDQxZDExNGM4ZWI0MTA3NGQwNjg3MDlkMWQ4ZWU0YmMyNjExN2FhZDc5OGMyZmNiNjVmNzhhNzViYzFjMzMwOTE0MjhkZmQ5ZWJmNDVjMTQiLCJpYXQiOjE3MTA4NjgyMzguMDk2ODc2LCJuYmYiOjE3MTA4NjgyMzguMDk2ODgsImV4cCI6MTc0MjQwNDIzOC4wNTMzMzgsInN1YiI6IjEiLCJzY29wZXMiOlsidXNlci1hY2Nlc3MiLCJ1c2VyLXJlYWQiXX0.Z0qd-AZ2AOjawFBUu4ZYmivpe88fpvFJwYmt8CkWY0Xii5VEEJtek3f4v6QyGKues6YyvD_qRN6qQgW6rDhB3PoEmwjus6VHV5RKMqn5Swvb25kAglaWCuNYUDvef0meOG0l_nvNVMOVC9zotNdyDhT2CLv2XVEQKOKWcumKTvHcAttWXfSMaCJjVDQlKYk0IhRyFJvgArXd3mIhH-1ZeGQLFFlAagkkUljPiSV0n1DphTD9fPZO_eov3bhFJzUevWaUNsFwcw6MPX-S2bSvT4fsYt9c67dxKEPuPLoE_kG4nD470xGgviXx-85xaj00u9cd_fJ3lw9zX849u_SrhiKrRNW2-w8VzGM8Kp_1EyvmCJ3eqJOEWNkqr_13QlreolSyk0MPx7maSGD812qL3AaJJLdv98s4RF-YdPCfL_oRkB_vCm3kqIs7JquT6dPDVfeHPO-rZw4NNF2brBz3O2RHkGydmWlUJHSyre98PrqCdha0-_wAlvJvB-_qsOFJ1tHKkkOExQDmzlD96VbLBLhDJavbyMud7s70fXHxrGpwGzt3sWuUwSAwrcZUcudrBpKOTwVVUqy7pVOgFW2nyw2Awz1hyaVEwWt0HwPvEyXA-1CaAihxNr8r-G8xzuaeCECJNCcuQ00UJJHSP9afAYgrsPLkKzD21RakKgyyH7Q",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{url}}/user?skip=0&take=2&search=user",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user"
+							],
+							"query": [
+								{
+									"key": "skip",
+									"value": "0"
+								},
+								{
+									"key": "take",
+									"value": "2"
+								},
+								{
+									"key": "search",
+									"value": "user"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "List User",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "{{url}}/user?skip=0&take=2&search=user",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"user"
+									],
+									"query": [
+										{
+											"key": "skip",
+											"value": "0"
+										},
+										{
+											"key": "take",
+											"value": "2"
+										},
+										{
+											"key": "search",
+											"value": "user"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 19 Mar 2024 17:38:46 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 19 Mar 2024 17:38:46 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.10"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"id\": 2,\n            \"name\": \"user\",\n            \"role\": 2,\n            \"email\": \"user@admin.com\",\n            \"last_logged_in\": null,\n            \"created_at\": null,\n            \"updated_at\": null,\n            \"deleted_at\": null\n        }\n    ],\n    \"message\": \"Data Found.\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Create User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZTAyZmI1MzdkZDUyNmRjM2Y3YTUzYWZhZmY3NzQ2M2YwNzQzNmM0NzY4NWNhY2U0YWNjNGNiZTIxMDU2MTBjNmFlYTI3NDE2ZjczOGY2YjciLCJpYXQiOjE3MTA4NzA0NzYuNDM2NjUsIm5iZiI6MTcxMDg3MDQ3Ni40MzY2NTMsImV4cCI6MTc0MjQwNjQ3Ni4zOTgxOTIsInN1YiI6IjEiLCJzY29wZXMiOlsicHJvZHVjdC1hY2Nlc3MiLCJwcm9kdWN0LXJlYWQiLCJwcm9kdWN0LWNyZWF0ZSIsInByb2R1Y3QtdXBkYXRlIiwicHJvZHVjdC1kZWxldGUiLCJ1c2VyLWFjY2VzcyIsInVzZXItcmVhZCIsInVzZXItY3JlYXRlIiwidXNlci11cGRhdGUiLCJ1c2VyLWRlbGV0ZSJdfQ.N5NqmMtyZd5iXHfYyP3P3J2_TGa99J68yMgKB6BD22ODG_l7ifuDz-Uks7ZFf9YsOsAxZz91en0CZoTw21vC2Q1ymJl4nYPKvNVNB5KZB--VnrgDQQQ40d4T10FY-WCT1auoWlWQlPtOAz-zwyxP8goV_K_CuBqVNWOqCQo2wB44_sQ23nr0S79pwZ7be5VEkyhRaf5ylOFv0RWCwoJekYC3cLnDv3ejLNSBTlk4L3d66H2AzsA1oFjeSdkwx--GwBz1CzADhHXTn1PlyiAn5iSz8ilG2XR3jC3GH3-vHm4QCFDz9tQzUw7sypluiz-d5MbUeUOmkIGoLJWLPkpnmPMMz9ZwRGj0m7-jRtxk11KDLl9KEvNtIvTFrVg1c-_iiMbu38l3n8sKgK_DCphLR3Zj14tctkQUPN-xdGjIG7aXz8lqHtqcRg7UKDATPuRysIB8x3L5sYdjsanB6aM8-N2lReZVwvAZ6YwybqiEXJcuYdFKiNM65Dasc-6G2Rj5g5f3kXeWBxtsrUIh05oGW_BeQso-Vlfk1CQEllQCsXyNLduNoisfHBA7M1WvbOqkoR_3XzE5U1sZ0xx0txoszrHUWGhOeRn2wgIaGZW1XWR9g-Fo21_IJY69LeP-TacgDtBBDkz4z1VOqfk25OKtnk7lHGrSRVIq87b78uKHUsE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Dimas Kumara",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "dimas@admin.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "1234",
+									"type": "text"
+								},
+								{
+									"key": "role",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/user",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create User",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "Dimas Kumara",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "dimas@admin.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "1234",
+											"type": "text"
+										},
+										{
+											"key": "role",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/user",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"user"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 19 Mar 2024 17:56:40 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 19 Mar 2024 17:56:40 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.10"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"name\": \"Dimas Kumara\",\n        \"email\": \"dimas@admin.com\",\n        \"role\": \"1\"\n    },\n    \"message\": \"Create User Successfully.\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Update User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZTAyZmI1MzdkZDUyNmRjM2Y3YTUzYWZhZmY3NzQ2M2YwNzQzNmM0NzY4NWNhY2U0YWNjNGNiZTIxMDU2MTBjNmFlYTI3NDE2ZjczOGY2YjciLCJpYXQiOjE3MTA4NzA0NzYuNDM2NjUsIm5iZiI6MTcxMDg3MDQ3Ni40MzY2NTMsImV4cCI6MTc0MjQwNjQ3Ni4zOTgxOTIsInN1YiI6IjEiLCJzY29wZXMiOlsicHJvZHVjdC1hY2Nlc3MiLCJwcm9kdWN0LXJlYWQiLCJwcm9kdWN0LWNyZWF0ZSIsInByb2R1Y3QtdXBkYXRlIiwicHJvZHVjdC1kZWxldGUiLCJ1c2VyLWFjY2VzcyIsInVzZXItcmVhZCIsInVzZXItY3JlYXRlIiwidXNlci11cGRhdGUiLCJ1c2VyLWRlbGV0ZSJdfQ.N5NqmMtyZd5iXHfYyP3P3J2_TGa99J68yMgKB6BD22ODG_l7ifuDz-Uks7ZFf9YsOsAxZz91en0CZoTw21vC2Q1ymJl4nYPKvNVNB5KZB--VnrgDQQQ40d4T10FY-WCT1auoWlWQlPtOAz-zwyxP8goV_K_CuBqVNWOqCQo2wB44_sQ23nr0S79pwZ7be5VEkyhRaf5ylOFv0RWCwoJekYC3cLnDv3ejLNSBTlk4L3d66H2AzsA1oFjeSdkwx--GwBz1CzADhHXTn1PlyiAn5iSz8ilG2XR3jC3GH3-vHm4QCFDz9tQzUw7sypluiz-d5MbUeUOmkIGoLJWLPkpnmPMMz9ZwRGj0m7-jRtxk11KDLl9KEvNtIvTFrVg1c-_iiMbu38l3n8sKgK_DCphLR3Zj14tctkQUPN-xdGjIG7aXz8lqHtqcRg7UKDATPuRysIB8x3L5sYdjsanB6aM8-N2lReZVwvAZ6YwybqiEXJcuYdFKiNM65Dasc-6G2Rj5g5f3kXeWBxtsrUIh05oGW_BeQso-Vlfk1CQEllQCsXyNLduNoisfHBA7M1WvbOqkoR_3XzE5U1sZ0xx0txoszrHUWGhOeRn2wgIaGZW1XWR9g-Fo21_IJY69LeP-TacgDtBBDkz4z1VOqfk25OKtnk7lHGrSRVIq87b78uKHUsE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Dimas Kumara",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "dimaskumara11@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "1234",
+									"type": "text"
+								},
+								{
+									"key": "role",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/user/3",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user",
+								"3"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update User",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "name",
+											"value": "Dimas Kumara",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "dimaskumara11@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "1234",
+											"type": "text"
+										},
+										{
+											"key": "role",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/user/3",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"user",
+										"3"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 19 Mar 2024 17:58:39 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 19 Mar 2024 17:58:39 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.10"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"name\": \"Dimas Kumara\",\n        \"email\": \"dimaskumara11@gmail.com\",\n        \"role\": \"1\"\n    },\n    \"message\": \"Update User Successfully.\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZTAyZmI1MzdkZDUyNmRjM2Y3YTUzYWZhZmY3NzQ2M2YwNzQzNmM0NzY4NWNhY2U0YWNjNGNiZTIxMDU2MTBjNmFlYTI3NDE2ZjczOGY2YjciLCJpYXQiOjE3MTA4NzA0NzYuNDM2NjUsIm5iZiI6MTcxMDg3MDQ3Ni40MzY2NTMsImV4cCI6MTc0MjQwNjQ3Ni4zOTgxOTIsInN1YiI6IjEiLCJzY29wZXMiOlsicHJvZHVjdC1hY2Nlc3MiLCJwcm9kdWN0LXJlYWQiLCJwcm9kdWN0LWNyZWF0ZSIsInByb2R1Y3QtdXBkYXRlIiwicHJvZHVjdC1kZWxldGUiLCJ1c2VyLWFjY2VzcyIsInVzZXItcmVhZCIsInVzZXItY3JlYXRlIiwidXNlci11cGRhdGUiLCJ1c2VyLWRlbGV0ZSJdfQ.N5NqmMtyZd5iXHfYyP3P3J2_TGa99J68yMgKB6BD22ODG_l7ifuDz-Uks7ZFf9YsOsAxZz91en0CZoTw21vC2Q1ymJl4nYPKvNVNB5KZB--VnrgDQQQ40d4T10FY-WCT1auoWlWQlPtOAz-zwyxP8goV_K_CuBqVNWOqCQo2wB44_sQ23nr0S79pwZ7be5VEkyhRaf5ylOFv0RWCwoJekYC3cLnDv3ejLNSBTlk4L3d66H2AzsA1oFjeSdkwx--GwBz1CzADhHXTn1PlyiAn5iSz8ilG2XR3jC3GH3-vHm4QCFDz9tQzUw7sypluiz-d5MbUeUOmkIGoLJWLPkpnmPMMz9ZwRGj0m7-jRtxk11KDLl9KEvNtIvTFrVg1c-_iiMbu38l3n8sKgK_DCphLR3Zj14tctkQUPN-xdGjIG7aXz8lqHtqcRg7UKDATPuRysIB8x3L5sYdjsanB6aM8-N2lReZVwvAZ6YwybqiEXJcuYdFKiNM65Dasc-6G2Rj5g5f3kXeWBxtsrUIh05oGW_BeQso-Vlfk1CQEllQCsXyNLduNoisfHBA7M1WvbOqkoR_3XzE5U1sZ0xx0txoszrHUWGhOeRn2wgIaGZW1XWR9g-Fo21_IJY69LeP-TacgDtBBDkz4z1VOqfk25OKtnk7lHGrSRVIq87b78uKHUsE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{url}}/user/3",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user",
+								"3"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete User",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "{{url}}/user/4",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"user",
+										"4"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 19 Mar 2024 18:00:31 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 19 Mar 2024 18:00:31 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.10"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [],\n    \"message\": \"Delete User Successfully.\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "List Product",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYjAwYThhNmM4YzI0MzdmZWU4NGEyN2QxYzVlMTVjMmY0NGExNWQ1YWM0MDU0YTExMzVhYzQ5ZTM5YjNmZjQ5ZWQwNmY0ODgzNGQxYjU5MGEiLCJpYXQiOjE3MTA4NzI1ODAuNTA3NDU4LCJuYmYiOjE3MTA4NzI1ODAuNTA3NDYzLCJleHAiOjE3NDI0MDg1ODAuNDY3MzEzLCJzdWIiOiIxIiwic2NvcGVzIjpbInByb2R1Y3QtYWNjZXNzIiwicHJvZHVjdC1yZWFkIiwicHJvZHVjdC1jcmVhdGUiLCJwcm9kdWN0LXVwZGF0ZSIsInByb2R1Y3QtZGVsZXRlIiwidXNlci1hY2Nlc3MiLCJ1c2VyLXJlYWQiLCJ1c2VyLWNyZWF0ZSIsInVzZXItdXBkYXRlIiwidXNlci1kZWxldGUiXX0.cIVaGuOUik-u2Hz6m_XaCxKO3lOE9Yls1Z3zIjbj7lOOD6MkEA4FioGmvhqdKQZ1Cgk3wZCgsPxZQUo4aJLXE89Vu4JA-ADT_RZNcCqpWtGkNm_-F46lN21rTm1bg7GA56eScfqx4iCy3LqfSq4-78LZX_TofxlRbpsZ0M6ExhZL7FSKmm7JG-w51ePvRCA8lPjAKNBiuBk_BeQ9IHJxBRCA_rUYOO3MlhCSElSemq7HkwpL_jiCDaHQx18454_NUvPRaT8iQZqRddulFO2E1ohtGWjPfQP9q4TnEwVxKTijBqBn5BPEYN10OCj2HfPkfeHxgSOzbhJXOr0mLH3O8SPyTnCbttkgaZdaa00vedsZ7d3jtQZqR6DnHCsXhEZz6xo6GfM8zs-bCA7k5V_PFI6GGwuwLuxpctf3tOCsuFd5bPOerfO3VEVUoxzEdeABFEuA7GR11oxROylnC-z2vCVQXOinlY2AOsgdtfcocf_kXLSEb4KoWrDWjwLWGMULLs_Ow0409HvQksFrykCBVrsE0US_J5896m2fG5LZPGOAQ_G76KEqYWI8R1esCcaWGXHybNm-1FmX4LPTWoZuvhHkK1PL23wj6Qy52wu4bqaU0T8SWgaRvda-nuQ6_SkuMiR9FnrQnxDxL-KN_mxNgMlVkRPGfNSEmhnlTbBQ250",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{url}}/product?skip=0&take=2",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"product"
+							],
+							"query": [
+								{
+									"key": "skip",
+									"value": "0"
+								},
+								{
+									"key": "take",
+									"value": "2"
+								},
+								{
+									"key": "search",
+									"value": "sepatu",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "List Product",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "{{url}}/product?skip=0&take=2",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"product"
+									],
+									"query": [
+										{
+											"key": "skip",
+											"value": "0"
+										},
+										{
+											"key": "take",
+											"value": "2"
+										},
+										{
+											"key": "search",
+											"value": "sepatu",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 19 Mar 2024 18:31:18 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 19 Mar 2024 18:31:18 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.10"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"id\": 2,\n            \"code\": \"KCM-00001\",\n            \"name\": \"kacamata\",\n            \"image\": \"kacamata.png\",\n            \"description\": \"lorem ipsum bla bla bla ...\",\n            \"price\": 180000,\n            \"created_at\": null,\n            \"updated_at\": null,\n            \"deleted_at\": null\n        },\n        {\n            \"id\": 1,\n            \"code\": \"SPT-00001\",\n            \"name\": \"sepatu\",\n            \"image\": \"sepatu.jpg\",\n            \"description\": \"lorem ipsum bla bla bla ...\",\n            \"price\": 150000,\n            \"created_at\": null,\n            \"updated_at\": null,\n            \"deleted_at\": null\n        }\n    ],\n    \"message\": \"Data Found.\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Create Product",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZTNlMzUyMjdiMzE3NTE1NDFiN2M5YzU1NGY3ODUyMzIzZDNiYjYzODdiYzI3NjU2ZDg5ZjdlM2YxYTQ4MjY3MzRjZDYwMTU5ODVlMDkxZmEiLCJpYXQiOjE3MTA4NzQxOTIuNzE2NTg0LCJuYmYiOjE3MTA4NzQxOTIuNzE2NTksImV4cCI6MTc0MjQxMDE5Mi42NzExNDQsInN1YiI6IjIiLCJzY29wZXMiOlsicHJvZHVjdC1hY2Nlc3MiLCJwcm9kdWN0LXJlYWQiLCJ1c2VyLWFjY2VzcyIsInVzZXItcmVhZCJdfQ.mXwOHTDatj_J-FaF5oexyxdc7gfk26FV6EO6_xC72HO0FBOk1X0rxh8eoodBN_2RtNN1Fxs6_A48p0T-R1Sih02BqQcA_HkVDg7Rm2TZYRYRTgtycdEIwi1HNRIJvsygBUN2Beo3Z3M6ItnD2CxK1Gld5Juj_izNDTIuy2qXjuD7ch0KFQb6loUXHAnoE901ryZyl7fVf1NXhu_zCt_t--23NHdi0qKD3o-vad67Bgdh3BSQGTfmlcqFED4sOVsGx_z3kKM5T12_GD4HFq_xI7P70cbMxKrdlkW4fqeWf8wik0SBf5g0hcJk_jFsJiJBFddioeuDq52hT3UPJ-151i4bjuQwAcQaOic8R5d6p6if7CM986U2dMRjUDL9ao-RNHTPVQXodtysRtJWm9yAfAerFQFgaS8clY28mnPWjUUtEpyJYbR18gG6SF7NwiNCQer-DVldbESP86UZUIIRnxTf88MGy8dW5Wn2XZaBHL6GZ_h0G3K2CYwxBCre32gqB_O5WIXJWst8kmXbsjSMxA3j6u46lfdM3idVxUoxsmDcoemssDLoIfBNw8tkOgzd-eTC_ucArZD7uMaSZ6dG0I2Y2fiOgb2pqwwfTKmDsIUxgooFWtAiwowGZod9mqfB_envVbrfpxUhNsA-Szy6YiP-3KfjXSIprFnvsN9t8ws",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "sepatu kuda",
+									"type": "text"
+								},
+								{
+									"key": "code",
+									"value": "SPT-00003",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "lorem ipsum bla bla bla",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "250000",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/Dimas/Downloads/SQUARE_SOLAR_PO_cosssssspy-min.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/product",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"product"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create Product",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "sepatu kuda",
+											"type": "text"
+										},
+										{
+											"key": "code",
+											"value": "SPT-00003",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "lorem ipsum bla bla bla",
+											"type": "text"
+										},
+										{
+											"key": "price",
+											"value": "250000",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/C:/Users/Dimas/Downloads/SQUARE_SOLAR_PO_cosssssspy-min.jpg"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/product",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"product"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 19 Mar 2024 18:41:25 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 19 Mar 2024 18:41:25 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.10"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"name\": \"sepatu kuda\",\n        \"code\": \"SPT-00003\",\n        \"description\": \"lorem ipsum bla bla bla\",\n        \"price\": \"250000\",\n        \"image\": \"PRD-143191742865f9dc55b2d4c.jpg\"\n    },\n    \"message\": \"Create Product Successfully.\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Product",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZTAyZmI1MzdkZDUyNmRjM2Y3YTUzYWZhZmY3NzQ2M2YwNzQzNmM0NzY4NWNhY2U0YWNjNGNiZTIxMDU2MTBjNmFlYTI3NDE2ZjczOGY2YjciLCJpYXQiOjE3MTA4NzA0NzYuNDM2NjUsIm5iZiI6MTcxMDg3MDQ3Ni40MzY2NTMsImV4cCI6MTc0MjQwNjQ3Ni4zOTgxOTIsInN1YiI6IjEiLCJzY29wZXMiOlsicHJvZHVjdC1hY2Nlc3MiLCJwcm9kdWN0LXJlYWQiLCJwcm9kdWN0LWNyZWF0ZSIsInByb2R1Y3QtdXBkYXRlIiwicHJvZHVjdC1kZWxldGUiLCJ1c2VyLWFjY2VzcyIsInVzZXItcmVhZCIsInVzZXItY3JlYXRlIiwidXNlci11cGRhdGUiLCJ1c2VyLWRlbGV0ZSJdfQ.N5NqmMtyZd5iXHfYyP3P3J2_TGa99J68yMgKB6BD22ODG_l7ifuDz-Uks7ZFf9YsOsAxZz91en0CZoTw21vC2Q1ymJl4nYPKvNVNB5KZB--VnrgDQQQ40d4T10FY-WCT1auoWlWQlPtOAz-zwyxP8goV_K_CuBqVNWOqCQo2wB44_sQ23nr0S79pwZ7be5VEkyhRaf5ylOFv0RWCwoJekYC3cLnDv3ejLNSBTlk4L3d66H2AzsA1oFjeSdkwx--GwBz1CzADhHXTn1PlyiAn5iSz8ilG2XR3jC3GH3-vHm4QCFDz9tQzUw7sypluiz-d5MbUeUOmkIGoLJWLPkpnmPMMz9ZwRGj0m7-jRtxk11KDLl9KEvNtIvTFrVg1c-_iiMbu38l3n8sKgK_DCphLR3Zj14tctkQUPN-xdGjIG7aXz8lqHtqcRg7UKDATPuRysIB8x3L5sYdjsanB6aM8-N2lReZVwvAZ6YwybqiEXJcuYdFKiNM65Dasc-6G2Rj5g5f3kXeWBxtsrUIh05oGW_BeQso-Vlfk1CQEllQCsXyNLduNoisfHBA7M1WvbOqkoR_3XzE5U1sZ0xx0txoszrHUWGhOeRn2wgIaGZW1XWR9g-Fo21_IJY69LeP-TacgDtBBDkz4z1VOqfk25OKtnk7lHGrSRVIq87b78uKHUsE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "sepatu kuda",
+									"type": "text"
+								},
+								{
+									"key": "code",
+									"value": "SPT-00002",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "lorem ipsum bla bla bla",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "250000",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": []
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/product/7",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"product",
+								"7"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update Product",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "sepatu kuda",
+											"type": "text"
+										},
+										{
+											"key": "code",
+											"value": "SPT-00002",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "lorem ipsum bla bla bla",
+											"type": "text"
+										},
+										{
+											"key": "price",
+											"value": "250000",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": []
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/product/7",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"product",
+										"7"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 19 Mar 2024 18:45:30 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 19 Mar 2024 18:45:30 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.10"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"name\": \"sepatu kuda\",\n        \"code\": \"SPT-00002\",\n        \"description\": \"lorem ipsum bla bla bla\",\n        \"price\": \"250000\"\n    },\n    \"message\": \"Update Product Successfully.\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Product",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZTAyZmI1MzdkZDUyNmRjM2Y3YTUzYWZhZmY3NzQ2M2YwNzQzNmM0NzY4NWNhY2U0YWNjNGNiZTIxMDU2MTBjNmFlYTI3NDE2ZjczOGY2YjciLCJpYXQiOjE3MTA4NzA0NzYuNDM2NjUsIm5iZiI6MTcxMDg3MDQ3Ni40MzY2NTMsImV4cCI6MTc0MjQwNjQ3Ni4zOTgxOTIsInN1YiI6IjEiLCJzY29wZXMiOlsicHJvZHVjdC1hY2Nlc3MiLCJwcm9kdWN0LXJlYWQiLCJwcm9kdWN0LWNyZWF0ZSIsInByb2R1Y3QtdXBkYXRlIiwicHJvZHVjdC1kZWxldGUiLCJ1c2VyLWFjY2VzcyIsInVzZXItcmVhZCIsInVzZXItY3JlYXRlIiwidXNlci11cGRhdGUiLCJ1c2VyLWRlbGV0ZSJdfQ.N5NqmMtyZd5iXHfYyP3P3J2_TGa99J68yMgKB6BD22ODG_l7ifuDz-Uks7ZFf9YsOsAxZz91en0CZoTw21vC2Q1ymJl4nYPKvNVNB5KZB--VnrgDQQQ40d4T10FY-WCT1auoWlWQlPtOAz-zwyxP8goV_K_CuBqVNWOqCQo2wB44_sQ23nr0S79pwZ7be5VEkyhRaf5ylOFv0RWCwoJekYC3cLnDv3ejLNSBTlk4L3d66H2AzsA1oFjeSdkwx--GwBz1CzADhHXTn1PlyiAn5iSz8ilG2XR3jC3GH3-vHm4QCFDz9tQzUw7sypluiz-d5MbUeUOmkIGoLJWLPkpnmPMMz9ZwRGj0m7-jRtxk11KDLl9KEvNtIvTFrVg1c-_iiMbu38l3n8sKgK_DCphLR3Zj14tctkQUPN-xdGjIG7aXz8lqHtqcRg7UKDATPuRysIB8x3L5sYdjsanB6aM8-N2lReZVwvAZ6YwybqiEXJcuYdFKiNM65Dasc-6G2Rj5g5f3kXeWBxtsrUIh05oGW_BeQso-Vlfk1CQEllQCsXyNLduNoisfHBA7M1WvbOqkoR_3XzE5U1sZ0xx0txoszrHUWGhOeRn2wgIaGZW1XWR9g-Fo21_IJY69LeP-TacgDtBBDkz4z1VOqfk25OKtnk7lHGrSRVIq87b78uKHUsE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{url}}/product/7",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"product",
+								"7"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete Product",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "{{url}}/product/7",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"product",
+										"7"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 19 Mar 2024 18:45:54 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 19 Mar 2024 18:45:54 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.10"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [],\n    \"message\": \"Delete Product Successfully.\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "user@admin.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "user",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/login",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Login",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "admin@admin.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "admin",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/login",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 19 Mar 2024 17:08:01 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 19 Mar 2024 17:08:01 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.1.10"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"id\": 1,\n        \"name\": \"admin\",\n        \"role\": 1,\n        \"email\": \"admin@admin.com\",\n        \"last_logged_in\": null,\n        \"created_at\": null,\n        \"updated_at\": null,\n        \"deleted_at\": null,\n        \"token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYTA5YzM1N2Y2N2QxNTBiZDgxZjRhYjY5MDg3MWQyZmMxYjBjMjcwODU3OWVhYmYyNmQzMTE3NTViODM4MmMxMWZjZmE1NmNjOTQzNmE1NzAiLCJpYXQiOjE3MTA4NjgwODEuNDQwNjgxLCJuYmYiOjE3MTA4NjgwODEuNDQwNjg0LCJleHAiOjE3NDI0MDQwODEuMzk5MTM2LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.LpNSIMZjyGA85i2gVv3sJdHIJorrgGxab32u0PwZgLUwUaf2GizLguIvqasf2AyJCpF8I8hnu1K7RW4NbgKCL70N8pUIRbKlb_V-6nLMRjtMtY5Xk5_EZ6tRk2FN3PT_qZY0RyJFE-X2oB5AAeksDB_E9pC1anvPfFoHWzmCj_cC4z_Ow0Lh_lwjBP7mjH8U8Rs9ZTf7ToXPmMfezka8lxiXx4MpWUx4q42lB0ZVe9yu1bI0F7546XzuQdsTbAEVdQ4AOjfDILNik5vTSA3mIiY6L9I6wkGIaOPGq39xwdW3RT8V-hfZLdjMDmFJHlxf2Y0sqJVPF-P9hiS-JlDM58JqPQ3EMAX-is4qHRd-0CJHzozZtBdKM9Ml-GnQSwpGwUiACYGC9e2Z1tZ6mdTfj0Bjomn85sEvPEs48AjjWx5PhAtJSVY1bJrMkI3NWGHeKKDoPiM73ONrj17DCR7EkNCNFWQwkpYbvxcZvUIQMezBqEnezyTwQzCTLdTVcmpcJdgD88U5W8jOF1kG_7T7nL0-4ZYONlXOy5PKa97Z4xqm9L_Ok8pOXsMR-tMInI-40s6H6VDslzZ7oUY8dIk4INfNVA-LS9xKGb58B4uyN20Qpf2vQPe-rr4PjYSUPFih8RdskAGFfJd3sxY_Snkegsi2ysQaIVN5Kd7VB_D6x0c\"\n    },\n    \"message\": \"Login Successfully.\"\n}"
+				}
+			]
+		}
+	]
+}
